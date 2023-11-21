@@ -7,7 +7,7 @@ Installation guide and demo: https://youtu.be/G7xYz6ZQQnY
 1. Drag Video.Player.v1.0.unitypackage to Asset
 2. On any Hierarchy object, add the "Video Player" component
 3. Drag the sorted frames of your video into the Texture Array field.
-*3.1. You can split the video itself into frames using your program or using sites like:
+3.1. You can split the video itself into frames using your program or using sites like:
 - https://www.aconvert.com/image/mp4-to-png/
 - https://www.onlineconverter.com/video-to-jpg
 4. Drag the GameObject that will be the parent for the frames. Also, do not forget to adjust the Scale, because the resolution of the video depends on it.
