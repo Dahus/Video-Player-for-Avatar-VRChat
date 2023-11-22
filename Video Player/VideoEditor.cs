@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -13,7 +14,12 @@ using UnityEngine.Video;
 using UnityEngine.UIElements;
 using System.Reflection.Emit;
 using UnityEditor.SceneManagement;
+using BlackStartX.GestureManager;
+using UnityEngine.XR.WSA;
+using UnityEngine.XR;
+#endif
 
+#if UNITY_EDITOR
 public class Loading
 {
     // Event for updating the progress bar
@@ -66,9 +72,9 @@ public class VideoEditor : Editor
             int maxFrame = video.TextureArray.Count;
 
             GUIStyle buttonStyle = new GUIStyle(GUI.skin.button);
-            buttonStyle.fontSize = 14; 
+            buttonStyle.fontSize = 14;
             buttonStyle.alignment = TextAnchor.MiddleCenter;
-            buttonStyle.normal.textColor = new Color(0.36f, 1f, 0.36f, 1f); 
+            buttonStyle.normal.textColor = new Color(0.36f, 1f, 0.36f, 1f);
 
             if (GUILayout.Button("Create a video", buttonStyle))
             {
@@ -141,8 +147,8 @@ public class VideoEditor : Editor
                 rectTransform.sizeDelta = new Vector2(100, 100);
 
                 frame.GetComponent<RectTransform>().anchoredPosition3D = new Vector3(0, 0, 0);
-                frame.GetComponent<RectTransform>().rotation = new Quaternion(0,0,0,0);
-                frame.GetComponent<RectTransform>().localScale = new Vector3 (1, 1, 1);
+                frame.GetComponent<RectTransform>().rotation = new Quaternion(0, 0, 0, 0);
+                frame.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
                 //Create Material
                 Material material = new Material(Shader.Find("Standard"));
@@ -175,6 +181,8 @@ public class VideoEditor : Editor
 
                 toDoAnimationON(frame, animationClipON, timeInterval);
                 toDoAnimationOFF(frame, animationClipOFF);
+
+                Debug.Log("Работаю: " + numberOfElements);
             }
         }
 
@@ -190,7 +198,7 @@ public class VideoEditor : Editor
             AnimationCurve curve = new AnimationCurve();
 
 
-            curve.AddKey(timeIntervalStorage - 0.01f, 0.0f); 
+            curve.AddKey(timeIntervalStorage - 0.01f, 0.0f);
             curve.AddKey(timeIntervalStorage, 1.0f);
             curve.AddKey(timeIntervalStorage + timeInterval, 0.0f);
 
@@ -291,3 +299,4 @@ public class VideoEditor : Editor
         }
     }
 }
+#endif

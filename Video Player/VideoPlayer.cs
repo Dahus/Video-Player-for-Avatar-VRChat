@@ -1,8 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEngine.WSA;
+#endif
+using BlackStartX.GestureManager;
+using UnityEngine.XR.WSA;
+using UnityEngine.XR;
+
 
 [System.Serializable]
 public class VideoPlayer : MonoBehaviour
@@ -18,7 +26,6 @@ public class VideoPlayer : MonoBehaviour
     // Name your .animation file
     public string AnimationName = "VideoAnim";
     // Quantity secound length video
-    [Header ("Number of seconds how long your video is")]
+    [Header("Number of seconds how long your video is")]
     public float VideoLength;
 }
-
