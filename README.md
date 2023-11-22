@@ -13,7 +13,6 @@ Installation guide and demo: https://youtu.be/G7xYz6ZQQnY
 5. You can set your own names for the created folder with files, animations and materials.
 6. Specify the duration of your video that you split into frames in step 3.1
 7. Done! You now have 2 animations, ...ON.anim enables animation, OFF.anim disables accordingly.
-8. When you're done, just delete the Video Player folder, because... it can cause errors when building a character.
 
 **Preview**
 ![Снимок экрана 2023-11-21 140851](https://github.com/Dahus/Video-Player-for-Avatar-VRChat/assets/74374308/6603945a-ca10-4408-857f-3e12fa153f7a)
