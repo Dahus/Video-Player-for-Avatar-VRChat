@@ -4,22 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
-using UnityEditor.VersionControl;
-using UnityEditor.Animations;
-using System.IO;
-using static BlackStartX.GestureManager.Editor.Data.GestureManagerStyles;
-using static Thry.AnimationParser;
-using BestHTTP.SecureProtocol.Org.BouncyCastle.Math.EC.Multiplier;
-using UnityEngine.Video;
-using UnityEngine.UIElements;
-using System.Reflection.Emit;
 using UnityEditor.SceneManagement;
-using BlackStartX.GestureManager;
-using UnityEngine.XR.WSA;
-using UnityEngine.XR;
-#endif
 
-#if UNITY_EDITOR
 public class Loading
 {
     // Event for updating the progress bar
@@ -299,4 +285,5 @@ public class VideoEditor : Editor
         }
     }
 }
+
 #endif
