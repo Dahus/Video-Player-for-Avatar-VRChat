@@ -1,5 +1,5 @@
 # Video Player for Avatar VRChat (Outdated)
-# Deprecated, the application is integrated into MeshAnimator Suite, use it.
+# Deprecated, the application is integrated into [MeshAnimator Suite](https://github.com/Dahus/MeshAnimator-Suite/tree/main), use it.
 
  It is video player, was designed for create video animation for avatar VRChat. Is worked according to principle enable and disable Mesh Renderer using .animation.
 
